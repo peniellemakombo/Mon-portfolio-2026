@@ -141,7 +141,6 @@ section h2 {
     font-weight: 700;
     position: relative;
     text-align: center;
-
 }
 
 section h2::after {
@@ -224,4 +223,556 @@ footer a:hover {
     color: var(--orange-vif);
     transform: translateY(-3px);
 }
+
+/* --- Page Passions Styles --- */
+
+/* Style du titre et de l'en-tête de section */
+.passions-header {
+    text-align: center;
+    margin-top: 5rem;
+    padding: 0 2rem;
+}
+
+.passions-header p {
+    color: var(--gris-fonce);
+    font-size: 1.2rem;
+}
+.passions-header h2{
+    color: var(--violet-doux);
+}
+
+/* Grille principale des passions */
+.passions-grid {
+    display: grid;
+    /* Crée automatiquement autant de colonnes de 280px minimum que possible */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    max-width: 1100px;
+    margin: 4rem auto;
+    padding: 0 2rem;
+}
+
+/* Style de chaque carte de passion */
+.passion-card {
+    background: white;
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease; /* Fluidité pour les animations */
+    border-bottom: 4px solid transparent; /* Prépare l'effet de bordure au survol */
+}
+
+/* Effets au survol (hover) de la carte */
+.passion-card:hover {
+    transform: translateY(-10px); /* Soulève légèrement la carte */
+    border-bottom: 4px solid var(--violet-doux); /* Fait apparaître une bordure violette */
+    box-shadow: 0 15px 30px rgba(108, 99, 255, 0.1); /* Augmente l'ombre */
+}
+
+/* Style de l'icône dans la carte */
+.passion-icon {
+    background-color: var(--gris-tres-clair);
+    width: 80px;
+    height: 80px;
+    line-height: 80px;
+    border-radius: 50%;
+    margin: 0 auto 1.5rem;
+    transition: 0.3s;
+}
+
+.passion-icon i {
+    font-size: 2rem;
+    color: var(--violet-doux);
+}
+
+/* Effets au survol de la carte sur l'icône */
+.passion-card:hover .passion-icon {
+    background-color: var(--violet-doux);
+}
+
+.passion-card:hover .passion-icon i {
+    color: white;
+}
+
+/* Style du titre et du texte dans la carte */
+.passion-card h3 {
+    margin-bottom: 1rem;
+    color: var(--violet-doux);
+    font-size: 1.4rem;
+}
+
+.passion-card p {
+    color: var(--gris-fonce);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+
+
+/* --- Page Divertissement Immersive --- */
+
+/* Conteneur principal qui prend toute la largeur */
+.divertissement-immersive {
+    max-width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+/* En-tête de la page (le titre centré) */
+.ent-header {
+    text-align: center;
+    padding: 5rem 2rem 2rem;
+
+}
+.ent-header h2{
+    color: var(--violet-fonce);
+}
+
+.ent-header p {
+    color: var(--gris-fonce);
+    font-size: 1.2rem;
+}
+
+/* Structure commune à chaque bannière de catégorie */
+.ent-section {
+    width: 100%;
+    height: 350px; /* Hauteur fixe pour un look bannières */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s ease; /* Préparation pour l'effet de zoom */
+}
+
+/* --- Définition des images d'arrière-plan --- */
+/* (Remplace ces URLs par tes propres images stylisées) */
+.ent-series {
+    background-image: url('.image/ApplicationMétéo.jpg');
+}
+
+.ent-cinema {
+    background-image: url('images/ambiance-cinema.jpg');
+}
+
+.ent-mangas {
+    background-image: url('images/ambiance-mangas.jpg');
+}
+
+/* Le filtre sombre (overlay) sur l'image pour le contraste */
+.ent-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Noir à 70% pour la lisibilité */
+    display: flex;
+    align-items: center; /* Centre verticalement le texte */
+    justify-content: flex-start; /* Aligne le contenu textuel à gauche */
+    padding: 0 10%; /* Espace sur les côtés */
+    transition: background-color 0.3s ease;
+}
+
+/* Effets au survol de la bannière entière */
+.ent-section:hover .ent-overlay {
+    background-color: rgba(0, 0, 0, 0.5); /* S'éclaircit légèrement au survol */
+}
+
+.ent-section:hover {
+    transform: scale(1.02); /* Zoom très discret sur toute la bannière */
+}
+
+/* Le contenu textuel superposé en blanc */
+.ent-content {
+    color: white;
+    max-width: 600px; /* Limite la largeur du texte */
+}
+
+/* Titre de la catégorie avec icône */
+.ent-content h3 {
+    font-size: 2.8rem;
+    font-weight: 800;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 15px; /* Espace entre icône et texte */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.ent-content h3 i {
+    color: var(--violet-doux);
+    font-size: 2.5rem;
+}
+
+/* Style de la liste des œuvres */
+.ent-content ul {
+    list-style: none; /* Enlève les puces par défaut */
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Espace entre les éléments */
+}
+
+.ent-content ul li {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: 0; /* Reset de ton style ul li global */
+    opacity: 0.9;
+}
+
+/* Petite puce circulaire violette devant chaque élément */
+.ent-content ul li i {
+    color: var(--violet-doux);
+    font-size: 0.6rem;
+}
+
+/* --- Responsive : Adaptations pour mobile --- */
+@media (max-width: 768px) {
+    .ent-section {
+        height: 250px; /* On réduit la hauteur sur petit écran */
+    }
+    
+    .ent-overlay {
+        padding: 0 5%; /* Moins d'espace sur les côtés */
+    }
+    
+    .ent-content h3 {
+        font-size: 1.8rem; /* Titres plus petits */
+        margin-bottom: 1rem;
+    }
+    
+    .ent-content h3 i {
+        font-size: 1.6rem;
+    }
+    
+    .ent-content ul li {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+/* 1. Définition des variables de couleurs */
+:root {
+    --violet-doux: #6c5ce7;
+    --violet-hover: #a29bfe;
+    --blanc: #ffffff;
+    --gris-fond: #f8f9fa;
+    --gris-clair: #e9ecef;
+    --gris-texte: #636e72;
+    --noir-titre: #2d3436;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* 2. Styles Généraux du Main */
+main {
+    background-color: var(--gris-fond);
+    font-family: 'Poppins', sans-serif;
+    color: var(--gris-texte);
+    line-height: 1.6;
+}
+
+.projets-section {
+    padding: 80px 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 3. Titre de la section */
+section h2 {
+    color: var(--violet-doux);
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+section h2::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 4px;
+    background: var(--violet-doux);
+    margin: 15px auto 0;
+    border-radius: 10px;
+}
+
+/* 4. Grille de projets */
+.projets-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+/* 5. Design de la Carte */
+.projet-card {
+    background: var(--blanc);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.projet-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 35px rgba(108, 92, 231, 0.2);
+}
+
+/* Image */
+.projet-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-bottom: 2px solid var(--gris-clair);
+}
+
+/* Contenu de la carte */
+.projet-content {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.projet-content h3 {
+    color: var(--noir-titre);
+    font-size: 1.4rem;
+    margin-bottom: 12px;
+}
+
+.projet-content p {
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+    color: var(--gris-texte);
+}
+
+/* Badges / Tags */
+.tags {
+    margin-bottom: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tags span {
+    background: rgba(108, 92, 231, 0.1);
+    color: var(--violet-doux);
+    padding: 4px 12px;
+    border-radius: 50px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+/* 6. Liens et Boutons (L'endroit où tu ne voyais rien) */
+.projet-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto; /* Pousse les liens tout en bas */
+    padding-top: 20px;
+    border-top: 1px solid var(--gris-clair);
+}
+
+.projet-links a, .status {
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espace entre l'icône et le texte */
+    transition: color 0.3s ease;
+}
+
+.projet-links a {
+    color: var(--noir-titre);
+}
+
+.projet-links a:hover {
+    color: var(--violet-doux);
+}
+
+.projet-links a i {
+    font-size: 1.1rem;
+}
+
+/* Style spécifique pour le status "Bientôt" */
+.status {
+    color: #b2bec3;
+    font-style: italic;
+    cursor: default;
+}
+
+/* 7. Responsive */
+@media (max-width: 768px) {
+    section h2 {
+        font-size: 2rem;
+    }
+}
+
+
+
+/* --- Page Contact Styles --- */
+
+.contact-container {
+    max-width: 1000px;
+    margin: 5rem auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Sépare en deux colonnes sur grand écran */
+    gap: 4rem;
+    align-items: start;
+}
+
+.contact-info h2 {
+    text-align: left; /* Aligne le titre à gauche pour cette section */
+}
+
+.contact-info h2::after {
+    margin: 1.2rem 0; /* Aligne la petite barre à gauche */
+}
+
+.contact-methods {
+    margin-top: 2rem;
+}
+
+.method-item {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.method-item i {
+    font-size: 1.8rem;
+    margin-right: 15px;
+    width: 40px;
+    text-align: center;
+}
+
+.method-item a {
+    text-decoration: none;
+    color: var(--gris-tres-fonce);
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.method-item a:hover {
+    color: var(--violet-doux);
+}
+
+/* Couleurs spécifiques logos */
+.social-apps {
+    margin-top: 2rem;
+    display: flex;
+    gap: 15px;
+}
+
+.social-apps a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 8px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: opacity 0.3s ease;
+}
+
+.social-apps a:first-child { background-color: #25D366;}
+.social-apps a:last-child { background-color: #0088CC;}
+
+.social-apps a:hover {
+    opacity: 0.8;
+}
+/* Styles du Formulaire */
+.contact-form {
+    background: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--gris-tres-fonce);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid var(--gris-clair);
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+    outline: none;
+    transition: 0.3s;
+}
+
+.form-group input:focus {
+    border-color: var(--violet-doux);
+    box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.1);
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: var(--violet-doux);
+    color: white;
+    padding: 15px;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btn-submit:hover {
+    background-color: var(--violet-fonce);
+    transform: translateY(-2px);
+}
+
+/* Responsive : On empile les colonnes sur mobile */
+@media (max-width: 768px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+        margin: 2rem auto;
+    }
+    
+    .contact-info {
+        text-align: center;
+    }
+    
+    .contact-info h2::after {
+        margin: 1.2rem auto;
+    }
+    
+    .method-item {
+        justify-content: center;
+    }
+}
+
+
+
+
+
+
+
+
+
 

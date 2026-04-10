@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Portfolio</title>
     <link rel="stylesheet" href="CSS/style.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
  </head>
- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+ 
  <body>
+
   <header>
     <div>
         <a href="">Mon Portfolio
@@ -25,18 +26,55 @@
         </ul>
     </nav>
   </header>
-  <main>
-    <h1>Contactez nous</h1>
-  </main>
+  
+<main class="contact-container">
+    <section class="contact-info">
+        <h2>Contactez-moi</h2>
+        <p>Basé à <strong>Lubumbashi</strong>, je suis disponible pour vos projets et collaborations.</p>
+        
+        <div class="contact-methods">
+            <div class="method-item">
+               <p><i class="fa-solid fa-location-dot"></i>Lubumbashi, RDC
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:+2439756546434">+243 975 656 434</a>
+               </p>
+            </div>
+            <div class="social-apps">
+                <a href="https://wa.me/243975656434" target="_blank" title="wathsapp">
+                    <i class="fa-brands fa-whatsapp whatsapp-icon"></i>wathsapp
+                </a>
 
-  <footer>
+                <a href="https://t.me/+243975656434" target="_blank" title="Telegram">
+                    <i class="fa-brands fa-telegram telegram-icon"></i>Telegram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-form-section">
+        <form action="#" class="contact-form">
+            <div class="form-group">
+                <label for="name">Nom complet</label>
+                <input type="text" id="name" name="name" placeholder="Votre nom" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Téléphone</label>
+                <input type="tel" id="phone" name="phone" placeholder="+243..." required>
+            </div>
+            <button type="submit" class="btn-submit">Envoyer le message</button>
+        </form>
+    </section>
+</main>
+
+<footer>
     <div>
-        <p>&copy;2026 Penielle.Tous droits réservés.</p>
-        <img src="image/image github.png" alt="pen" width="20">
-        <img src="image/photo IN.png" alt="pen" width="20">
-        <img src="image/photo X.png" alt="pen" width="20">   
+        <p>&copy ;2026 Penielle.Tous droits réservés.</p>
+        <a href=""><i class="fa-brands fa-github"></i></a>
+        <a href=""><i class="fa-brands fa-linkedin"></i></a>   
+        <a href=""><i class="fa-brands fa-x-twitter"></i></a>
     </div>
-  </footer>      
+</footer>      
 
  </body>
  </html>
+  

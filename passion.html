@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mon Portfolio</title>
     <link rel="stylesheet" href="CSS/style.css">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
  </head>
- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+ 
  <body>
   <header>
     <div>
@@ -25,16 +25,54 @@
         </ul>
     </nav>
   </header>
+ 
   <main>
-    <h1>Voici Mes passions</h1>
-  </main>
+    <section class="passions-header">
+        <h2>Mes Passions</h2>
+        <p>Découvrez ce qui m'anime au quotidien, entre technologie et créativité.</p>
+    </section>
 
-  <footer>
+    <section class="passions-grid">
+        <div class="passion-card">
+            <div class="passion-icon">
+                <i class="fa-solid fa-code"></i>
+            </div>
+            <h3>Développement Web</h3>
+            <p>J'adore créer des interfaces modernes et interactives. Mon défi actuel est de maîtriser l'écosystème Laravel.</p>
+        </div>
+
+        <div class="passion-card">
+            <div class="passion-icon">
+                <i class="fa-solid fa-brain"></i>
+            </div>
+            <h3>Intelligence Artificielle</h3>
+            <p>Passionné par la manière dont l'IA transforme notre façon de coder et de résoudre des problèmes complexes.</p>
+        </div>
+
+        <div class="passion-card">
+            <div class="passion-icon">
+                <i class="fa-solid fa-pen-nib"></i>
+            </div>
+            <h3>Design Graphique</h3>
+            <p>Utiliser Figma et Photoshop pour transformer une idée abstraite en un visuel percutant et ergonomique.</p>
+        </div>
+
+        <div class="passion-card">
+            <div class="passion-icon">
+                <i class="fa-solid fa-gamepad"></i>
+            </div>
+            <h3>Gaming & Tech</h3>
+            <p>Toujours à l'affût des dernières innovations matérielles et des mécaniques de jeu innovantes.</p>
+        </div>
+    </section>
+</main>
+
+ <footer>
     <div>
-        <p>&copy;2026 Penielle.Tous droits réservés.</p>
-        <img src="image/image github.png" alt="pen" width="20">
-        <img src="image/photo IN.png" alt="pen" width="20">
-        <img src="image/photo X.png" alt="pen" width="20">   
+        <p>&copy; 2026 Penielle.Tous droits réservés.</p>
+        <a href=""><i class="fa-brands fa-github"></i></a>
+        <a href=""><i class="fa-brands fa-linkedin"></i></a>   
+        <a href=""><i class="fa-brands fa-x-twitter"></i></a>
     </div>
   </footer>      
 
